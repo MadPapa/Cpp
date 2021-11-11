@@ -1,5 +1,7 @@
 #include <iostream>
 #include <time.h>
+#include <math.h>
+
 using namespace std;
 
 int main()
@@ -7,10 +9,23 @@ int main()
     /**
         zad. 1
         Program wypisuje wszystkie liczby pierwsze z <1,200>
-
     **/
     cout << "Zad_1" << endl;
-    cout <<"Still in progress :)" << endl;
+    for(int i = 1; i <= 200; i++)
+    {
+        if(i < 2)
+            continue;
+
+        bool czy_pierwsza = true;
+        for(int j = 2; j <= sqrt(i); j++)
+        {
+            if(i % j == 0)
+                czy_pierwsza = false;
+        }
+        if(czy_pierwsza)
+            cout << i << ", ";
+    }
+    cout << endl;
 
 
     /**
@@ -98,6 +113,8 @@ int main()
             cout << endl;
             life--;
         }
+        if(life == 0)
+            cout << "Poprawna odpowiedz to: " << iloczyn << endl;
     }
 
 
