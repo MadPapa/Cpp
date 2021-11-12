@@ -14,7 +14,7 @@ void print_tab(int tab[], int rozmiar)
 int main()
 {
     srand(time(NULL));
-/*
+
     cout << "Zad_1" << endl;
 
     int liczba;
@@ -161,19 +161,20 @@ int main()
         n--;
     }
     cout << "answer = " << n << endl;
-*/
+
     cout << "\nZad_9" << endl;
 
     ///9.1
-    int tab_1[10] = {1,2,3,4,5,6,7,8,9,10};
-    int tab_2[10] = {1,3,3,5,5,2,7,8,9,10};
-/*
+
+    int tab_1[10];
+    int tab_2[10];
+
     for(int i = 0; i < 10; i++)
     {
         tab_1[i] = rand() % 11;
         tab_2[i] = rand() % 11;
     }
-*/
+
     print_tab(tab_1, 10);
     print_tab(tab_2, 10);
 
