@@ -8,33 +8,35 @@ int ileCyfr(char []);
 
 int main()
 {
-    char napis[25];
-    cin.getline(napis, 25);
-    cout << "ile cyfr w napisie = " << ileCyfr(napis) << endl;
 
-    
-    /**
     ///zad_1
     char napis[20];
     char new_napis[20];
 
+    cout << "Podaj napis z liczbami:" << endl;
     cin.getline(napis, 20);
 
-    int i = 0;
-    while(napis[i] != '\0')
-        i++;
+    int dlugosc = 0;
+    while(napis[dlugosc] != '\0')
+        dlugosc++;
 
-    for(int j = 0; j < i; j++)
+    for(int i = 0; i < dlugosc; i++)
     {
-        if(napis[j] >= '0' && napis[j] <= '9')
-            j++;
+        if(napis[i] >= '0' && napis[i] <= '9')
+            new_napis[i] = ' ';
         else
-            new_napis[j] = napis[j];
+            new_napis[i] = napis[i];
     }
 
-    cout << napis << endl;
     cout << new_napis << endl;
-    **/
+
+
+    ///zad_2
+    cout << endl;
+    char napis_2[25];
+    cout << "Podaj napis z liczbami:" << endl;;
+    cin.getline(napis_2, 25);
+    cout << "ile cyfr w napisie = " << ileCyfr(napis_2) << endl;
 
     return 0;
 }
